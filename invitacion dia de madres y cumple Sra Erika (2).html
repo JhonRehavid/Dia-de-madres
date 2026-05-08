@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación - Maria Erika</title>
+    <style>
+        :root {
+            --rosa-suave: #fff5f7;
+            --rosa-fuerte: #d81b60;
+            --lila: #8e24aa;
+            --dorado: #d4af37;
+            --texto: #5d4037;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--rosa-suave);
+            color: var(--texto);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            max-width: 500px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 2px solid #f8bbd0;
+            text-align: center;
+        }
+
+        h1 { color: var(--rosa-fuerte); font-size: 28px; margin-bottom: 10px; }
+        h2 { color: var(--lila); font-style: italic; font-size: 18px; margin-bottom: 25px; }
+
+        .info-evento {
+            background: #fce4ec;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px dashed var(--rosa-fuerte);
+            text-align: left;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        form { text-align: left; }
+
+        .campo { margin-bottom: 15px; }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--rosa-fuerte);
+            font-size: 14px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ce93d8;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+            font-family: sans-serif;
+        }
+
+        .fila {
+            display: flex;
+            gap: 10px;
+        }
+
+        .fila .campo { flex: 1; }
+
+        button {
+            background: linear-gradient(to right, var(--rosa-fuerte), var(--lila));
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        button:hover { opacity: 0.9; transform: scale(1.02); }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #9e9e9e;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>¡Una Doble Celebración!</h1>
+    <h2>Día de la Madre & Cumpleaños Maria Erika</h2>
+
+    <div class="info-evento">
+        📍 <strong>Lugar:</strong> Salón social Balcones de granada 5<br>
+        🏠 <strong>Dirección:</strong> Tv. 120a #77-30, Bogotá<br>
+        📅 <strong>Fecha:</strong> Domingo 17 de mayo
+    </div>
+
+    <form action="TU_URL_DE_GOOGLE_APPS_SCRIPT_AQUI" method="POST">
+        
+        <div class="campo">
+            <label>Tu Nombre:</label>
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+        </div>
+
+        <div class="campo">
+            <label>Familia:</label>
+            <select name="familia">
+                <option value="Gamboa">Familia Gamboa</option>
+                <option value="Rios">Familia Ríos</option>
+                <option value="Pachon">Familia Pachón</option>
+                <option value="Orrego">Familia Orrego</option>
+                <option value="Otro">Otros invitados</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label>¿Asistiremos?</label>
+            <select name="asistencia">
+                <option value="Si">Sí, allí estaremos</option>
+                <option value="No">No nos es posible</option>
+            </select>
+        </div>
+
+        <div class="fila">
+            <div class="campo">
+                <label>Total asistentes:</label>
+                <input type="number" name="cantidadAsistentes" min="1" value="1" required>
+            </div>
+            <div class="campo">
+                <label>Cant. Mamitas:</label>
+                <input type="number" name="cantidadMamitas" min="0" value="1" required>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label>Mensaje para Maria Erika:</label>
+            <textarea name="mensaje" rows="3" placeholder="Dedícale unas palabras..."></textarea>
+        </div>
+
+        <button type="submit">Confirmar mi Asistencia</button>
+    </form>
+
+    <div class="footer">
+        Deseamos compartir una tarde inolvidable de música y baile.
+    </div>
+</div>
+
+</body>
+</html>
